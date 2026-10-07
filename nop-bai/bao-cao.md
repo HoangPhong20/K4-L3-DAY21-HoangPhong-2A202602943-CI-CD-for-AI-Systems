@@ -27,13 +27,14 @@ HƯỚNG DẪN - đọc rồi XÓA TOÀN BỘ các khối chú thích này sau k
 
 | Lần chạy | n_estimators | learning_rate | max_depth | f1_score | accuracy |
 |---|---|---|---|---|---|
-| 1 | ___ | ___ | ___ | ___ | ___ |
-| 2 | ___ | ___ | ___ | ___ | ___ |
-| 3 | ___ | ___ | ___ | ___ | ___ |
+| 1 | 100 | 0.1 | 3 | 0.7109 | 0.8780 |
+| 2 | 100 | 0.1 | 3 | 0.7109 | 0.8780 |
+| 3 | 50 | 0.05 | 2 | 0.6051 | 0.8460 |
+| 4 | 200 | 0.1 | 5 | 0.7149 | 0.8740 |
 
-**Bộ siêu tham số đã chọn:** `n_estimators=___`, `learning_rate=___`, `max_depth=___`.
+**Bộ siêu tham số đã chọn:** `n_estimators=200`, `learning_rate=0.1`, `max_depth=5`.
 
-**Lý do:** ___
+**Lý do:** Lần chạy 4 đạt F1 cao nhất (0.7149), vượt ngưỡng triển khai 0.65. Lần chạy 1 và 2 dùng cùng bộ tham số nên cho kết quả giống nhau; có tổng cộng bốn lần chạy với ba cấu hình khác nhau. Hai lần này có accuracy cao nhất (0.8780) nhưng F1 thấp hơn lần 4, cho thấy chọn theo accuracy có thể khác với chọn theo F1 của lớp thu nhập cao. Lần chạy 3 kết hợp ít cây, learning_rate thấp và cây nông, đạt F1 0.6051 nên không đủ ngưỡng. Learning_rate nhỏ thường cần nhiều cây hơn để bù mức đóng góp thấp của mỗi cây. Vì nhiều tham số thay đổi đồng thời, chưa thể kết luận tác động riêng của từng tham số.
 
 <!--
 Trả lời trong phần Lý do:

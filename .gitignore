@@ -1,5 +1,8 @@
 mlflow.db
 mlartifacts/
+mlruns/
+.pytest_cache/
+.pytest-tmp-train/
 models/
 outputs/
 data/train_batch1.csv
